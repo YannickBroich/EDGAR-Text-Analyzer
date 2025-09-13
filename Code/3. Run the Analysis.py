@@ -4,7 +4,7 @@ import os, re, glob, html as htmlmod, logging
 from concurrent.futures import ProcessPoolExecutor, as_completed
 import pandas as pd
 
-# ---------------- Projekt-Root ----------------
+
 BASE_DIR       = r"YourPath\EDGAR Text Analyzer"
 DATA_DIR       = os.path.join(BASE_DIR, "Data")
 FILINGS_NEW    = os.path.join(BASE_DIR, "Filings")             
@@ -210,3 +210,4 @@ if __name__ == "__main__":
     cnt_out = os.path.join(OUT_DIR, "monpol_hits_counts.csv")
     cnt_df.to_csv(cnt_out, index=False, encoding="utf-8")
     log.info(f"Counts   -> {cnt_out} (rows={len(cnt_df)})")
+
